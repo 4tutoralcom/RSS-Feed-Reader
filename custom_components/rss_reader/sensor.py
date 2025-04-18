@@ -1,5 +1,6 @@
+import logging
 from homeassistant.helpers.entity import Entity
-from .rss_feed_parser import get_latest_entry
+from .rss_feed_parser import fetch_feed_sync
 from .const import DOMAIN
 
 async def async_setup_entry(hass, config_entry, async_add_entities):
@@ -22,12 +23,14 @@ class RSSFeedSensor(Entity):
     def extra_state_attributes(self):
         return self._attrs
 
-    async def async_update(self):
-        entry = get_latest_entry(self._url)
-        if entry:
-            self._state = entry["title"]
-            self._attrs = {
-                "summary": entry["summary"],
-                "link": entry["link"],
-                "published": entry["published"]
-            }
+async def async_update(self):
+    _LOGGER = logging.getLogger(__name__)
+    _LOGGER.debug("This is a debug message")
+    entry = await self.hass.async_add_executor_job(fetch_feed_sync, self._url)
+    if entry:
+        self._state = entry["title"]
+        self._attrs = {
+            "summary": entry["summary"],
+            "link": entry["link"],
+            "published": entry["published"]
+        }

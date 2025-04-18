@@ -4,7 +4,7 @@
     "version": "0.1.0",
     "documentation": "https://github.com/4tutoralcom/RSS-Feed-Reader/",
     "requirements": ["feedparser"],
-    "codeowners": ["@yourgithub"],
+    "codeowners": ["@4tutoralcom"],
     "config_flow": true
   }
   
