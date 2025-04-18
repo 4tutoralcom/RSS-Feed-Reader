@@ -1,7 +1,7 @@
 {
     "domain": "rss_reader",
     "name": "RSS Feed Reader",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "documentation": "https://github.com/4tutoralcom/RSS-Feed-Reader/",
     "requirements": ["feedparser"],
     "codeowners": ["@4tutoralcom"],

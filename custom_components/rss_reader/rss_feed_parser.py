@@ -1,6 +1,6 @@
 import feedparser
 
-def get_latest_entry(feed_url):
+def fetch_feed_sync(feed_url):
     feed = feedparser.parse(feed_url)
     if feed.entries:
         entry = feed.entries[0]
