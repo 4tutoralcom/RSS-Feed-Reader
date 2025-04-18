@@ -1,0 +1,1 @@
+DOMAIN = "rss_reader"

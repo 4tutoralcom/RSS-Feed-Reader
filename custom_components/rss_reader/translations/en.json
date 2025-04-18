@@ -1,0 +1,14 @@
+{
+    "config": {
+      "step": {
+        "user": {
+          "title": "Configure RSS Feeds",
+          "description": "Enter one or more RSS feed URLs.",
+          "data": {
+            "feeds": "RSS Feed URLs"
+          }
+        }
+      }
+    }
+  }
+  

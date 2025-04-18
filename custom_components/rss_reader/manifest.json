@@ -1,0 +1,10 @@
+{
+    "domain": "rss_reader",
+    "name": "RSS Feed Reader",
+    "version": "0.1.0",
+    "documentation": "https://github.com/4tutoralcom/RSS-Feed-Reader/",
+    "requirements": ["feedparser"],
+    "codeowners": ["@yourgithub"],
+    "config_flow": true
+  }
+  
